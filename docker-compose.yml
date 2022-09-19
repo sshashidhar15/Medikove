@@ -1,0 +1,25 @@
+version: '3'
+services:
+ medikove:
+  build:
+   dockerfile: Dockerfile.dev
+   context: ../medikove
+  volumes:
+   - /app/node_modules
+   - ./medikove:/app
+
+ redis:
+  image: 'redis:latest'
+ 
+ nginx:
+  restart: always
+  build:
+   dockerfile: Dockerfile.dev
+   context: ./nginx
+  ports:
+   - '3050:80'
+
+  
+ 
+
+   

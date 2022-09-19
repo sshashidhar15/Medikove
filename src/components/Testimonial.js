@@ -18,7 +18,7 @@ function Testimonial(){
              <h2 className="testimonial-text"> Patient Success Stories</h2>
              <h3 className="testimonial-sub-text"> Know about our patients who have successfully recovered</h3>
                
-              <div class="row mt-30">
+              <div class="row">
 
                   <div class="col-md-4">
                         <div className="profile">
