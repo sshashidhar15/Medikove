@@ -1,9 +1,13 @@
 version: '3'
 services:
+
  medikove:
   build:
    dockerfile: Dockerfile.dev
    context: ../medikove
+  stdin_open: true
+  ports:
+   - "3000:3000"
   volumes:
    - /app/node_modules
    - ./medikove:/app
@@ -12,13 +16,14 @@ services:
   image: 'redis:latest'
  
  nginx:
+  depends_on:
+    - medikove
   restart: always
   build:
    dockerfile: Dockerfile.dev
    context: ./nginx
   ports:
    - '3050:80'
-
   
  
 
