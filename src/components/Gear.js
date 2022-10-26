@@ -2,41 +2,47 @@ import React from "react"
 import { lazy} from "react";
 import { data } from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTh, faBars } from "@fortawesome/free-solid-svg-icons";
-import { isCompositeComponent } from "react-dom/test-utils";
 
-const FilterCategory = lazy(() => import("./card/FilterCategory"));
-const CardProductGrid = lazy(() =>import("./card/CardProductGrid"));
-const CardProductList = lazy(() => import("../components/card/CardProductList"));
+import CardProductGrid from "./card/CardProductGrid"
+
+import FilterCategory from "./card/FilterCategory"
+import { PersonPlus } from "react-bootstrap-icons";
+import Cart from "./cart/Cart";
 
 
-
-function Gear()
+    
+function Gear(props)
 {
 
   let products = data.products;
 
     const[item,setItem] = React.useState({
-        currentProducts: products.slice(0,4),
+        currentProducts: products.slice(0,9),
         currentPage: null,
         totalPages: null,
         totalItems: 0,
         view: "grid",
       })
+
+const [cart,setCart] = React.useState(0)
+
+function add(){
+    setCart(prevCart => prevCart + 1)
+    {props.countHandle(cart,products)}
+ }
  
   console.log(item.currentProducts)
 
     return (   
                 <React.Fragment>
-                  <div
+                  {/* <div
                     className="p-5 bg-primary bs-cover"
                     style={{
                       backgroundImage: "url(../components/images/hero.png)",
-                    }}>
-                    
-                  </div>
+                    }}>                    
+                  </div> */}
   
-                  <div className="container-fluid md-3">
+                  <div >
                     <div className="row">
                       <div className="col-md-3">
                         <FilterCategory />   
@@ -45,17 +51,19 @@ function Gear()
                     
                       <div className="col-md-9">
                         
-                        <div className="row mt-0">
+                        <div className="row mt-4">
                           {item.view === "grid" &&
                             item.currentProducts.map((product, idx) => {
                               return (
                                 <div key={idx} className="col-md-3">
-                                  <CardProductGrid data={product} />
+                                  <CardProductGrid data={product} addCart={add}/>
                                  </div>
                               );
-                            })}  
+                            
+                            })}
+                           
                         </div>
-                  
+                     
                       </div>
                     </div>
                     

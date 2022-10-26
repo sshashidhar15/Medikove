@@ -3,39 +3,20 @@ import { Link } from "react-router-dom";
 import { ReactComponent as IconStarFill } from "bootstrap-icons/icons/star-fill.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
+import Header from "../Header"
 
 function CardProductGrid(props) {
 
   const product = props.data
   console.log(product.price)
+
   
+
   return(
-  
-  <div className="card">
+  <div className="card h-100">
+ 
   
       <img src={product.img}  className="card-img-top" alt="..." / >
-      {product.isNew && (
-        <span className="badge bg-success position-absolute mt-2 ms-2">
-          New
-        </span>
-      )}
-      {product.isHot && (
-        <span className="badge bg-danger position-absolute r-0 mt-2 me-2">
-          Hot
-        </span>
-      )}
-      {(product.discountPercentage > 0 || product.discountPrice > 0) && (
-        <span
-          className={`rounded position-absolute p-2 bg-warning  ms-2 small ${
-            product.isNew ? "mt-5" : "mt-2"
-          }`}
-        >
-          -
-          {product.discountPercentage > 0
-            ? product.discountPercentage + "%"
-            : "INR" + product.discountPrice}
-        </span>
-      )}
       <div className="card-body">
         <h6 className="card-subtitle mb-2">
           <Link to={product.link} className="text-decoration-none">
@@ -60,16 +41,16 @@ function CardProductGrid(props) {
             type="button"
             className="btn btn-sm btn-primary"
             title="Add to cart"
-          >
-            <FontAwesomeIcon icon={faCartPlus} />
+            onClick={props.addCart}>
+          
+          
+            
+            <FontAwesomeIcon icon={faCartPlus}/>
+
+            Add to Cart
           </button>
-          {/*<button
-            type="button"
-            className="btn btn-sm btn-outline-secondary"
-            title="Add to wishlist"
-          >
-           <FontAwesomeIcon icon={faHeart} /> 
-            </button> */}
+       
+
         </div>
       </div>
     </div>

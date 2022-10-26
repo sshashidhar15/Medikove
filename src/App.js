@@ -1,4 +1,5 @@
 //import logo from './logo.svg';
+import React from "react"
 import './App.css';
 import Header from "./components/Header"
 import Main from "./components/Main"
@@ -9,6 +10,7 @@ import Clinic from "./components/Clinic"
 import Footer from "./components/Footer"
 import Testimonial from "./components/Testimonial"
 import Gear from "./components/Gear"
+// import CardProductGrid from "./components/card/CardProductGrid"
 import Expertise from "./components/Expertise"
 import ContactUs from "./components/ContactUs"
 import DoctorLogin from "./components/Auth/DoctorLogin"
@@ -34,38 +36,40 @@ function App() {
 
 const [token,setToken] = useState();
 
-/*\if(!token) {
-  return <Login setToken={setToken} />}*/
+/* cart functionality */
+const [count,setCount] = React.useState(0)
+const [number,setNumber] = React.useState(0)
+const [Prod,setProd] = React.useState({})
 
+function countCart(count,productData){
+  setNumber(count)
+  setProd(productData)
+  console.log(Prod)
+}
 
+    
 
   return (
     <div className="App">
+   
       <Switch>
+        
 
         <Route exact path="/">
-                  <Header />
+                  <Header number = {number}/>
                   <Main />
-
                   <Process />
-
                   <Clinic />
-
                   <Testimonial />
-
                   <Footer />
                   
-          
-                 
-             {/* <section className="feature-list">
-                      {doctor}
-                  </section>  */}
+
 
         </Route>
               
         <Route path="/gear">
-              <Header />
-              <Gear />
+              <Header number = {number}/>
+              <Gear countHandle={countCart}/>
                 <Footer />
           </Route>
 
