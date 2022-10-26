@@ -1,5 +1,12 @@
 pipeline {
     agent {
-        dockerfile true 
+        Dockerfile true 
         }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
+    }
 }
