@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        Dockerfile true 
+        docker { image 'medikove' }
         }
     stages {
         stage('Build') {
