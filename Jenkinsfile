@@ -2,3 +2,4 @@ pipeline {
     agent {
         dockerfile true 
         }
+}
