@@ -16,3 +16,4 @@ node {
        def app = docker.build("intellithing/medikove:${commit_id}", '.').push()
      }
    }
+}
