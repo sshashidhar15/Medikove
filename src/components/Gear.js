@@ -22,16 +22,50 @@ function Gear(props)
         totalPages: null,
         totalItems: 0,
         view: "grid",
+        cart:0
       })
 
-const [cart,setCart] = React.useState(0)
+// const [cart,setCart] = React.useState(0)
 
-function add(){
-    setCart(prevCart => prevCart + 1)
-    {props.countHandle(cart,products)}
- }
+// function addCart(id){
+//     setItem(prevCart => {
+//       return prevCart.currentProducts.map((prd)=> {
+//         return prd.id==id ? {...CardProductGrid}:CardProductGrid
+//       })  
+//     })
+
+//       // props.countHandle(item.cart)
+//  }
+
+// function addCart(id){
+//   {console.log(id)}
+//   setItem(prevCart => {
+//     return prevCart.currentProducts.map((prd) => {
+//       return prd.id===id && props.countHandle(prd)
+//     })
+//       })
+
+//     }
+
+    function addCart(id){
+      {console.log(id)}
+      setItem(prevCart => {
+        return prevCart.currentProducts.map((prd) => {
+          
+            if(prd.id==id){
+              let prdData = {}
+              prdData = {prd}
+              props.countHandle(prdData)
+
+            } 
+        })
+          })
+    
+        }
+
+    // props.countHandle(item.cart)
  
-  console.log(item.currentProducts)
+
 
     return (   
                 <React.Fragment>
@@ -56,7 +90,7 @@ function add(){
                             item.currentProducts.map((product, idx) => {
                               return (
                                 <div key={idx} className="col-md-3">
-                                  <CardProductGrid data={product} addCart={add}/>
+                                  <CardProductGrid data={product} addCart={() => addCart(product.id)}/>
                                  </div>
                               );
                             

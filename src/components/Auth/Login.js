@@ -35,7 +35,7 @@ import React,{useState} from "react"
 import "../../components/css/Main.css"
 import PropTypes from 'prop-types';
 import {Link, Switch, Route} from "react-router-dom";
-import Dashboard from "../../components/Dashboard"
+import Dashboard from "../Dashboard"
 
 
 var token =""

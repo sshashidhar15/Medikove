@@ -42,9 +42,9 @@ const [number,setNumber] = React.useState(0)
 const [Prod,setProd] = React.useState({})
 
 function countCart(count,productData){
+  {console.log(count)}
+  {console.log(productData)}
   setNumber(count)
-  setProd(productData)
-  console.log(Prod)
 }
 
     

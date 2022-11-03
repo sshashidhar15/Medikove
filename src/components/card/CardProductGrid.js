@@ -8,12 +8,13 @@ import Header from "../Header"
 function CardProductGrid(props) {
 
   const product = props.data
-  console.log(product.price)
+
 
   
 
   return(
   <div className="card h-100">
+    {/* {console.log(product.id)} */}
  
   
       <img src={product.img}  className="card-img-top" alt="..." / >
