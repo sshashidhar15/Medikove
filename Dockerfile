@@ -5,11 +5,13 @@ WORKDIR /medikove
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 
-RUN npm install -f
+
+RUN npm ci --production
+
 COPY . .
 RUN npm run build
 
-FROM nginx
+FROM nginx:latest as prod
 EXPOSE 3000
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf

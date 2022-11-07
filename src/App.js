@@ -41,10 +41,10 @@ const [count,setCount] = React.useState(0)
 const [number,setNumber] = React.useState(0)
 const [Prod,setProd] = React.useState({})
 
-function countCart(count,productData){
-  {console.log(count)}
+function countCart(productData){
+  // {console.log(count)}
   {console.log(productData)}
-  setNumber(count)
+  // setNumber(count)
 }
 
     

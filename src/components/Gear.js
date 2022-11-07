@@ -15,6 +15,9 @@ function Gear(props)
 {
 
   let products = data.products;
+  let prdData = {}
+  let count = 0
+
 
     const[item,setItem] = React.useState({
         currentProducts: products.slice(0,9),
@@ -47,21 +50,29 @@ function Gear(props)
 
 //     }
 
-    function addCart(id){
-      {console.log(id)}
-      setItem(prevCart => {
-        return prevCart.currentProducts.map((prd) => {
-          
-            if(prd.id==id){
-              let prdData = {}
-              prdData = {prd}
-              props.countHandle(prdData)
+    // function addCart(id){
+    //   {console.log(id)}
+    //   setItem(prevCart => {
+    //           prevCart
+             
+    //         //  return prevCart.currentProducts.map((prd) => {prd}
+    //         //     //  return prd.id===id ? {...prevCart.currentProducts}:prevCart
+    //         //     //     // {props.countHandle(item)}   
+            
+    //       })
+    //     }
 
-            } 
-        })
-          })
+     function addCart(id){
+      console.log(id)
+      if (item.id === id){
+        console.log(item.name)
+
+      }
+      return setItem(item)
+         
+            }
     
-        }
+
 
     // props.countHandle(item.cart)
  
