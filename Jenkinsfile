@@ -12,7 +12,7 @@ node {
 //      }
 //    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v2/', 'intellithing') {
+     docker.withRegistry('https://registry.hub.docker.com/', 'intellithing') {
        def app = docker.build("intellithing/medikove:${commit_id}", '.').push()
      }
    }
