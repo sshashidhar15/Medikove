@@ -1,0 +1,29 @@
+.legal-page {
+  background: #f8fbff;
+  padding: 4rem 1.5rem;
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(31, 60, 136, 0.08);
+
+  h1 {
+    color: #1f3c88;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    color: #1f3c88;
+  }
+
+  p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-top: 0.5rem;
+  }
+}

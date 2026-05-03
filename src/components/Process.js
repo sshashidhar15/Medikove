@@ -1,5 +1,5 @@
 import React from "react"
-import "../components/css/Main.css"
+import "../components/styles/Main.scss"
 import process from "./images/process.png"
 
 function Process(){

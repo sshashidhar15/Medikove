@@ -1,0 +1,265 @@
+.physio-page {
+  background: #f8fbff;
+  color: #111827;
+}
+
+.physio-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(8, 35, 58, 0.72), rgba(8, 35, 58, 0.72)),
+    url("../../components/images/physio-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.physio-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: #ffffff;
+
+  h1 {
+    max-width: 680px;
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 620px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #dbeafe;
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #1f3c88;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.eyebrow,
+.tag {
+  color: #16b978;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.7rem;
+}
+
+.physio-section,
+.recovery-section,
+.why-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 2.2rem;
+    color: #1f3c88;
+  }
+}
+
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.condition-card {
+  background: #ffffff;
+  padding: 1.6rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(31, 60, 136, 0.08);
+
+  h3 {
+    color: #1f3c88;
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+  }
+
+  p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}
+
+.recovery-section {
+  background: #ffffff;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.3rem;
+}
+
+.process-step {
+  background: #f3f7ff;
+  padding: 1.5rem;
+  border-radius: 14px;
+
+  span {
+    color: #16b978;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    color: #1f3c88;
+    margin: 0.7rem 0;
+  }
+
+  p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}
+
+.why-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #1f3c88;
+  }
+
+  ul {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(31, 60, 136, 0.08);
+
+    li {
+      margin-bottom: 0.9rem;
+      color: #374151;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .condition-grid,
+  .process-grid,
+  .why-section {
+    grid-template-columns: 1fr;
+  }
+
+  .physio-hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.book-btn {
+  padding: 0.9rem 1.5rem;
+  background: #1f3c88;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.soft-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.soft-modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(31, 60, 136, 0.22);
+  animation: modalFade 0.25s ease;
+
+  h2 {
+    color: #1f3c88;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .modal-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: #111827;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.85rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  form button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background: #1f3c88;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #334155;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

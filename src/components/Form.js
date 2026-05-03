@@ -1,8 +1,8 @@
 import React from "react"
-import "../components/css/Main.css"
+import "../components/styles/Main.scss"
 
 
-function Form()
+function Form(props)
 {
 
     const [formData,setFormData] = React.useState({
@@ -46,7 +46,8 @@ console.log(formData)
             className="form-input"
             name="fullName"
             value={formData.fullName}
-            onChange={handleChange}/></label> 
+            onChange={handleChange}
+            ref={props.inputRef}/></label> 
 
           
 

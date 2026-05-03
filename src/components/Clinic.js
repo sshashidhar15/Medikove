@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "../components/css/Main.css"
+import "../components/styles/Main.scss"
 import ucchvas from "./images/ucchvas.png"
 import {Link, Switch, Route} from "react-router-dom"
 

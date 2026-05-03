@@ -6,7 +6,7 @@ import { ReactComponent as IconBriefcase } from "bootstrap-icons/icons/briefcase
 import { ReactComponent as IconBadgeAd } from "bootstrap-icons/icons/badge-ad.svg";
 import { ReactComponent as IconGift } from "bootstrap-icons/icons/gift.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../components/css/Main.css"
+import "../components/styles/Main.scss"
 import {
   faTwitter,
   faFacebookF,
