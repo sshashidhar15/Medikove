@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "../components/css/Feature.css"
+import "../components/styles/Feature.scss"
 
 
 function Doctorlisting(props){

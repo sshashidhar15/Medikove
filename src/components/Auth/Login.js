@@ -32,7 +32,7 @@ function Login() {
 export default Login*/
 
 import React,{useState} from "react"
-import "../../components/css/Main.css"
+import "../../components/styles/Main.scss"
 import PropTypes from 'prop-types';
 import {Link, Switch, Route} from "react-router-dom";
 import Dashboard from "../Dashboard"

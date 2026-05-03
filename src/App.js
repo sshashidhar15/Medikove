@@ -1,13 +1,13 @@
 //import logo from './logo.svg';
 import React from "react"
-import './App.css';
+import './styles/App.scss';
 import Header from "./components/Header"
 import Main from "./components/Main"
 
 import Feature from "./components/Feature"
 import Process from "./components/Process"
 import Clinic from "./components/Clinic"
-import Footer from "./components/Footer"
+import Footer from "./components/footer_new"
 import Testimonial from "./components/Testimonial"
 import Gear from "./components/Gear"
 // import CardProductGrid from "./components/card/CardProductGrid"
@@ -19,7 +19,13 @@ import Dashboard from "./components/Dashboard"
 import data from "./doctordata"
 import {Switch,Route} from 'react-router-dom';
 import {useState} from "react"
-
+import Header_new from "./components/Header_new";
+import ProcessNew from "./components/process_new";
+import Testimonials from "./components/testimonials_new";
+import MedicalTests from "./components/MedicalTests";
+import Physiotherapy from "./components/Physiotherapy";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import Terms from "./components/Terms"
 
 function App() {
 
@@ -58,15 +64,45 @@ function countCart(productData){
         <Route exact path="/">
                   <Header number = {number}/>
                   <Main />
-                  <Process />
-                  <Clinic />
-                  <Testimonial />
+                  <ProcessNew />
+                  {/* <Clinic /> */}
+                  <Testimonials />
                   <Footer />
-                  
+                  {/* <Header_new /> */}
 
 
         </Route>
+
+         <Route path="/Medical-tests">
+              <Header/>
+              <MedicalTests />
+                <Footer />
+          </Route>
+
+           <Route path="/Physiotherapy">
+              <Header/>
+              <Physiotherapy />
+                <Footer />
+          </Route>
               
+              <Route path="/ContactUs">
+              <Header/>
+              <ContactUs/>
+                <Footer />
+          </Route>
+
+          <Route path="/privacy-policy">
+              <Header/>
+              <PrivacyPolicy/>
+                <Footer />
+          </Route>
+
+          <Route path="/terms-and-conditions">
+              <Header/>
+              <Terms/>
+                <Footer />
+          </Route>
+
         <Route path="/gear">
               <Header number = {number}/>
               <Gear countHandle={countCart}/>

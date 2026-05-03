@@ -1,0 +1,101 @@
+.medical-page {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #1f3c88;
+}
+
+/* ===== CARD ===== */
+
+.medical-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 12px 30px rgba(31, 60, 136, 0.08);
+}
+
+/* ===== HEADER ===== */
+
+.country-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 40px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #1f3c88;
+  }
+}
+
+/* ===== CONTENT ===== */
+
+.medical-card-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+}
+
+/* ===== DOCUMENTS ===== */
+
+.documents {
+  h4 {
+    margin-bottom: 0.6rem;
+    color: #374151;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  }
+}
+
+/* ===== PRICING ===== */
+
+.pricing {
+  h4 {
+    margin-bottom: 0.6rem;
+    color: #374151;
+  }
+}
+
+.price-box {
+  background: #f3f6fb;
+  padding: 1rem;
+  border-radius: 10px;
+
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+
+  strong {
+    display: block;
+    margin-top: 0.6rem;
+    color: #1f3c88;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .medical-card-content {
+    grid-template-columns: 1fr;
+  }
+}
