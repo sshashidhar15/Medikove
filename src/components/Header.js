@@ -7,7 +7,13 @@ function Header() {
     <header className="site-header">
       <nav className="nav">
         <Link to="/" className="logo">
-          KalBridge
+          <img
+            src="/logo.png"
+            alt="KalBridge Logo"
+            className="logo-image"
+          />
+
+          <span>KalBridge</span>
         </Link>
 
         <ul className="nav-items">
